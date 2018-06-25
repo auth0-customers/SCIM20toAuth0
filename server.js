@@ -1,8 +1,10 @@
 const Express = require('express');
 const app = require('./lib');
-const config = require('./config');
+// const config = require('./config');
+const dotenv = require('dotenv');
 const morgan = require('morgan');
 
+dotenv.load();
 const server = Express();
 const port = process.env.PORT || 8081;
 
@@ -16,10 +18,10 @@ function mockWebtaskContext(req, res, next) {
     if (!req.webtaskContext) {
         req.webtaskContext = {
             secrets: {
-                AUTH0_ISSUER_DOMAIN: config.AUTH0_ISSUER_DOMAIN,
-                AUTH0_CLIENT_ID: config.AUTH0_CLIENT_ID,
-                AUTH0_CLIENT_SECRET: config.AUTH0_CLIENT_SECRET,
-                AUDIENCE: config.AUDIENCE
+                AUTH0_ISSUER_DOMAIN: process.env.AUTH0_ISSUER_DOMAIN,
+                AUTH0_CLIENT_ID: process.env.AUTH0_CLIENT_ID,
+                AUTH0_CLIENT_SECRET: process.env.AUTH0_CLIENT_SECRET,
+                AUDIENCE: process.env.AUDIENCE
             }
         };
     }
