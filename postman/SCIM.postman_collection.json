@@ -16,7 +16,7 @@
 					},
 					{
 						"key": "Authorization",
-						"value": "bearer <TOKEN>"
+						"value": "bearer {{token}}"
 					}
 				],
 				"body": {
@@ -24,14 +24,11 @@
 					"raw": "  {\n    \"schemas\": [\n      \"urn:ietf:params:scim:schemas:core:2.0:User\",\n      \"urn:ietf:params:scim:schemas:extension:auth0:2.0:User\"\n    ],\n    \"password\":\"my-password!2134\",\n    \"emails\": [\n      {\n        \"value\": \"test-user@domain.com\",\n        \"primary\": true\n      }\n    ],\n    \"phoneNumbers\": [\n      {\n        \"value\": \"+18155358448\"\n      }\n    ],\n    \"meta\": {\n      \"resourceType\": \"User\",\n      \"created\": \"2018-04-11T18:16:44.429Z\",\n      \"lastModified\": \"2018-06-01T18:18:11.977Z\"\n    },\n    \"urn:auth0:2.0:User\": {\n      \"emailVerified\": true,\n      \"verifyEmail\": false,\n      \"identities\": [\n        {\n          \"provider\": \"auth0\",\n          \"userId\": \"auth0|user-id\",\n          \"connection\": \"Username-Password-Authentication\"\n        }\n      ],\n      \"phonesVerified\": [\n        true\n      ],\n      \"appMetadata\": [\n        {\n          \"type\": \"role\",\n          \"value\": \"Developer\"\n        },\n        {\n          \"type\": \"level\",\n          \"value\": \"2\"\n        }\n      ],\n      \"userMetadata\": [\n        {\n          \"type\": \"question\",\n          \"value\": \"What is your Dog's name?\"\n        },\n        {\n          \"type\": \"answer\",\n          \"value\": \"Firulais\"\n        },\n        {\n          \"type\": \"children\",\n          \"value\": [\"Girl Name 1\", \"Boy Name 1\"]\n        }\n      ]\n    }\n  }"
 				},
 				"url": {
-					"raw": "http://localhost:8081/scim/users",
-					"protocol": "http",
+					"raw": "{{domain}}/users",
 					"host": [
-						"localhost"
+						"{{domain}}"
 					],
-					"port": "8081",
 					"path": [
-						"scim",
 						"users"
 					]
 				},
@@ -50,7 +47,7 @@
 					},
 					{
 						"key": "Authorization",
-						"value": "bearer <TOKEN>"
+						"value": "bearer {{token}}"
 					}
 				],
 				"body": {
@@ -58,14 +55,11 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8081/scim/users/auth0|userid",
-					"protocol": "http",
+					"raw": "{{domain}}/users/auth0|userid",
 					"host": [
-						"localhost"
+						"{{domain}}"
 					],
-					"port": "8081",
 					"path": [
-						"scim",
 						"users",
 						"auth0|userid"
 					]
@@ -84,7 +78,7 @@
 					},
 					{
 						"key": "Authorization",
-						"value": "bearer <TOKEN>"
+						"value": "bearer {{token}}"
 					}
 				],
 				"body": {
@@ -92,14 +86,11 @@
 					"raw": "  {\n    \"schemas\": [\n      \"urn:ietf:params:scim:schemas:core:2.0:User\",\n      \"urn:ietf:params:scim:schemas:extension:auth0:2.0:User\"\n    ],\n    \"id\": \"auth0|id\",\n    \"externalId\": \"alanturing@turing.com\",\n    \"displayName\": \"Leandro Pelorosso\",\n    \"nickName\": \"leandro.pelorosso\",\n    \"locale\": \"en\",\n    \"name\": {\n          \"familyName\": \"Turing\",\n          \"formatted\": \"Alan Turing\",\n          \"givenName\": \"Anan\"\n    },\n    \"emails\": [\n      {\n        \"value\": \"alanturing@turing8.com\",\n        \"primary\": true\n      }\n    ],\n    \"photos\": [\n      {\n        \"value\": \"https://picture\",\n        \"type\": \"photo\"\n      }\n    ],\n    \"meta\": {\n      \"resourceType\": \"User\",\n      \"created\": \"2018-04-11T18:16:44.429Z\",\n      \"lastModified\": \"2018-06-01T18:18:11.977Z\"\n    },\n    \"urn:ietf:params:scim:schemas:extension:auth0:2.0:User\": {\n      \"emailVerified\": true,\n      \"appMetadata\": [\n        {\n          \"type\": \"role\",\n          \"value\": \"Developer\"\n        },\n        {\n          \"type\": \"level\",\n          \"value\": \"Level-2\"\n        }\n      ],\n      \"blocked\": false,\n      \"gender\": \"male\",\n      \"lastIp\": \"73.95.135.98\",\n      \"lastLogin\": \"2018-05-07T16:38:55.776Z\",\n      \"loginsCount\": 2,\n      \"multifactor\": [\"guardian\"],\n      \"userMetadata\": [\n        {\n          \"type\": \"question\",\n          \"value\": \"What is your Dog's name?\"\n        },\n        {\n          \"type\": \"answer\",\n          \"value\": \"Firulais\"\n        },\n        {\n          \"type\": \"children\",\n          \"value\": [\"Girl Name 1\", \"Boy Name 1\"]\n        }\n      ],\n      \"verifyEmail\": true\n    },\n    \"password\": \"my-passw$#fdsFK#@dsord\"\n  }"
 				},
 				"url": {
-					"raw": "http://localhost:8081/scim/users",
-					"protocol": "http",
+					"raw": "{{domain}}/users",
 					"host": [
-						"localhost"
+						"{{domain}}"
 					],
-					"port": "8081",
 					"path": [
-						"scim",
 						"users"
 					]
 				}
@@ -117,7 +108,7 @@
 					},
 					{
 						"key": "Authorization",
-						"value": "bearer <TOKEN>"
+						"value": "bearer {{token}}"
 					}
 				],
 				"body": {
@@ -125,14 +116,11 @@
 					"raw": "  {\n    \"schemas\": [\n      \"urn:ietf:params:scim:schemas:core:2.0:User\",\n      \"urn:ietf:params:scim:schemas:extension:auth0:2.0:User\"\n    ],\n    \"password\":\"my-new-password-!5678\",\n    \"emails\": [\n      {\n        \"value\": \"test-user@domain.com\",\n        \"primary\": true\n      }\n    ],\n    \"phoneNumbers\": [\n      {\n        \"value\": \"+18155358448\"\n      }\n    ],\n    \"meta\": {\n      \"resourceType\": \"User\",\n      \"created\": \"2018-04-11T18:16:44.429Z\",\n      \"lastModified\": \"2018-06-01T18:18:11.977Z\"\n    },\n    \"urn:auth0:2.0:User\": {\n     \n      \"blocked\": false,\n      \"verifyEmail\": false,\n      \"clientId\": \"MyClientId\",\n      \"verifyPhoneNumber\": false,\n      \"identities\": [\n        {\n          \"provider\": \"auth0\",\n          \"userId\": \"auth0|user-id\",\n          \"connection\": \"Username-Password-Authentication\"\n        }\n      ],\n      \"phonesVerified\": [\n        true\n      ],\n      \"appMetadata\": [\n        {\n          \"type\": \"role\",\n          \"value\": \"Developer\"\n        },\n        {\n          \"type\": \"level\",\n          \"value\": \"2\"\n        }\n      ],\n      \"userMetadata\": [\n        {\n          \"type\": \"question\",\n          \"value\": \"What is your Dog's name?\"\n        },\n        {\n          \"type\": \"answer\",\n          \"value\": \"Firulais\"\n        },\n        {\n          \"type\": \"children\",\n          \"value\": [\"Girl Name 1\", \"Boy Name 1\"]\n        }\n      ]\n    }\n  }"
 				},
 				"url": {
-					"raw": "http://localhost:8081/scim/users/auth0|id",
-					"protocol": "http",
+					"raw": "{{domain}}/users/auth0|id",
 					"host": [
-						"localhost"
+						"{{domain}}"
 					],
-					"port": "8081",
 					"path": [
-						"scim",
 						"users",
 						"auth0|id"
 					]
@@ -151,7 +139,7 @@
 					},
 					{
 						"key": "Authorization",
-						"value": "bearer <TOKEN>"
+						"value": "bearer {{token}}"
 					}
 				],
 				"body": {
@@ -159,14 +147,11 @@
 					"raw": "  {\n    \"schemas\": [\n      \"urn:ietf:params:scim:schemas:core:2.0:User\",\n      \"urn:ietf:params:scim:schemas:extension:auth0:2.0:User\"\n    ],\n    \"id\": \"auth0|id\",\n    \"externalId\": \"alanturing@turing.com\",\n    \"displayName\": \"Leandro Pelorosso\",\n    \"nickName\": \"leandro.pelorosso\",\n    \"locale\": \"en\",\n    \"name\": {\n          \"familyName\": \"Turing\",\n          \"formatted\": \"Alan Turing\",\n          \"givenName\": \"Anan\"\n    },\n    \"emails\": [\n      {\n        \"value\": \"alanturing@turing8.com\",\n        \"primary\": true\n      }\n    ],\n    \"photos\": [\n      {\n        \"value\": \"https://picture\",\n        \"type\": \"photo\"\n      }\n    ],\n    \"meta\": {\n      \"resourceType\": \"User\",\n      \"created\": \"2018-04-11T18:16:44.429Z\",\n      \"lastModified\": \"2018-06-01T18:18:11.977Z\"\n    },\n    \"urn:ietf:params:scim:schemas:extension:auth0:2.0:User\": {\n      \"emailVerified\": true,\n      \"appMetadata\": [\n        {\n          \"type\": \"role\",\n          \"value\": \"Developer\"\n        },\n        {\n          \"type\": \"level\",\n          \"value\": \"Level-2\"\n        }\n      ],\n      \"blocked\": false,\n      \"gender\": \"male\",\n      \"lastIp\": \"73.95.135.98\",\n      \"lastLogin\": \"2018-05-07T16:38:55.776Z\",\n      \"loginsCount\": 2,\n      \"multifactor\": [\"guardian\"],\n      \"userMetadata\": [\n        {\n          \"type\": \"question\",\n          \"value\": \"What is your Dog's name?\"\n        },\n        {\n          \"type\": \"answer\",\n          \"value\": \"Firulais\"\n        },\n        {\n          \"type\": \"children\",\n          \"value\": [\"Girl Name 1\", \"Boy Name 1\"]\n        }\n      ],\n      \"verifyEmail\": true\n    },\n    \"password\": \"my-passw$#fdsFK#@dsord\"\n  }"
 				},
 				"url": {
-					"raw": "http://localhost:8081/scim/schemas/",
-					"protocol": "http",
+					"raw": "{{domain}}/schemas/",
 					"host": [
-						"localhost"
+						"{{domain}}"
 					],
-					"port": "8081",
 					"path": [
-						"scim",
 						"schemas",
 						""
 					]
@@ -185,7 +170,7 @@
 					},
 					{
 						"key": "Authorization",
-						"value": "bearer <TOKEN>"
+						"value": "bearer {{token}}"
 					}
 				],
 				"body": {
@@ -193,14 +178,11 @@
 					"raw": "  {\n    \"schemas\": [\n      \"urn:ietf:params:scim:schemas:core:2.0:User\",\n      \"urn:ietf:params:scim:schemas:extension:auth0:2.0:User\"\n    ],\n    \"id\": \"auth0|id\",\n    \"externalId\": \"alanturing@turing.com\",\n    \"displayName\": \"Leandro Pelorosso\",\n    \"nickName\": \"leandro.pelorosso\",\n    \"locale\": \"en\",\n    \"name\": {\n          \"familyName\": \"Turing\",\n          \"formatted\": \"Alan Turing\",\n          \"givenName\": \"Anan\"\n    },\n    \"emails\": [\n      {\n        \"value\": \"alanturing@turing8.com\",\n        \"primary\": true\n      }\n    ],\n    \"photos\": [\n      {\n        \"value\": \"https://picture\",\n        \"type\": \"photo\"\n      }\n    ],\n    \"meta\": {\n      \"resourceType\": \"User\",\n      \"created\": \"2018-04-11T18:16:44.429Z\",\n      \"lastModified\": \"2018-06-01T18:18:11.977Z\"\n    },\n    \"urn:ietf:params:scim:schemas:extension:auth0:2.0:User\": {\n      \"emailVerified\": true,\n      \"appMetadata\": [\n        {\n          \"type\": \"role\",\n          \"value\": \"Developer\"\n        },\n        {\n          \"type\": \"level\",\n          \"value\": \"Level-2\"\n        }\n      ],\n      \"blocked\": false,\n      \"gender\": \"male\",\n      \"lastIp\": \"73.95.135.98\",\n      \"lastLogin\": \"2018-05-07T16:38:55.776Z\",\n      \"loginsCount\": 2,\n      \"multifactor\": [\"guardian\"],\n      \"userMetadata\": [\n        {\n          \"type\": \"question\",\n          \"value\": \"What is your Dog's name?\"\n        },\n        {\n          \"type\": \"answer\",\n          \"value\": \"Firulais\"\n        },\n        {\n          \"type\": \"children\",\n          \"value\": [\"Girl Name 1\", \"Boy Name 1\"]\n        }\n      ],\n      \"verifyEmail\": true\n    },\n    \"password\": \"my-passw$#fdsFK#@dsord\"\n  }"
 				},
 				"url": {
-					"raw": "http://localhost:8081/scim/users/auth0|id?attributes=emails,urn:auth0:2.0:User.identities",
-					"protocol": "http",
+					"raw": "{{domain}}/users/auth0|id?attributes=emails,urn:auth0:2.0:User.identities",
 					"host": [
-						"localhost"
+						"{{domain}}"
 					],
-					"port": "8081",
 					"path": [
-						"scim",
 						"users",
 						"auth0|id"
 					],
@@ -225,7 +207,7 @@
 					},
 					{
 						"key": "Authorization",
-						"value": "bearer <TOKEN>"
+						"value": "bearer {{token}}"
 					}
 				],
 				"body": {
@@ -233,14 +215,11 @@
 					"raw": "  {\n    \"schemas\": [\n      \"urn:ietf:params:scim:schemas:core:2.0:User\",\n      \"urn:ietf:params:scim:schemas:extension:auth0:2.0:User\"\n    ],\n    \"id\": \"auth0|id\",\n    \"externalId\": \"alanturing@turing.com\",\n    \"displayName\": \"Leandro Pelorosso\",\n    \"nickName\": \"leandro.pelorosso\",\n    \"locale\": \"en\",\n    \"name\": {\n          \"familyName\": \"Turing\",\n          \"formatted\": \"Alan Turing\",\n          \"givenName\": \"Anan\"\n    },\n    \"emails\": [\n      {\n        \"value\": \"alanturing@turing8.com\",\n        \"primary\": true\n      }\n    ],\n    \"photos\": [\n      {\n        \"value\": \"https://picture\",\n        \"type\": \"photo\"\n      }\n    ],\n    \"meta\": {\n      \"resourceType\": \"User\",\n      \"created\": \"2018-04-11T18:16:44.429Z\",\n      \"lastModified\": \"2018-06-01T18:18:11.977Z\"\n    },\n    \"urn:ietf:params:scim:schemas:extension:auth0:2.0:User\": {\n      \"emailVerified\": true,\n      \"appMetadata\": [\n        {\n          \"type\": \"role\",\n          \"value\": \"Developer\"\n        },\n        {\n          \"type\": \"level\",\n          \"value\": \"Level-2\"\n        }\n      ],\n      \"blocked\": false,\n      \"gender\": \"male\",\n      \"lastIp\": \"73.95.135.98\",\n      \"lastLogin\": \"2018-05-07T16:38:55.776Z\",\n      \"loginsCount\": 2,\n      \"multifactor\": [\"guardian\"],\n      \"userMetadata\": [\n        {\n          \"type\": \"question\",\n          \"value\": \"What is your Dog's name?\"\n        },\n        {\n          \"type\": \"answer\",\n          \"value\": \"Firulais\"\n        },\n        {\n          \"type\": \"children\",\n          \"value\": [\"Girl Name 1\", \"Boy Name 1\"]\n        }\n      ],\n      \"verifyEmail\": true\n    },\n    \"password\": \"my-passw$#fdsFK#@dsord\"\n  }"
 				},
 				"url": {
-					"raw": "http://localhost:8081/scim/users/auth0|id",
-					"protocol": "http",
+					"raw": "{{domain}}/users/auth0|id",
 					"host": [
-						"localhost"
+						"{{domain}}"
 					],
-					"port": "8081",
 					"path": [
-						"scim",
 						"users",
 						"auth0|id"
 					]
@@ -259,7 +238,7 @@
 					},
 					{
 						"key": "Authorization",
-						"value": "bearer <TOKEN>"
+						"value": "bearer {{token}}"
 					}
 				],
 				"body": {
@@ -267,14 +246,11 @@
 					"raw": "  {\n    \"schemas\": [\n      \"urn:ietf:params:scim:schemas:core:2.0:User\",\n      \"urn:ietf:params:scim:schemas:extension:auth0:2.0:User\"\n    ],\n    \"id\": \"auth0|id\",\n    \"externalId\": \"alanturing@turing.com\",\n    \"displayName\": \"Leandro Pelorosso\",\n    \"nickName\": \"leandro.pelorosso\",\n    \"locale\": \"en\",\n    \"name\": {\n          \"familyName\": \"Turing\",\n          \"formatted\": \"Alan Turing\",\n          \"givenName\": \"Anan\"\n    },\n    \"emails\": [\n      {\n        \"value\": \"alanturing@turing8.com\",\n        \"primary\": true\n      }\n    ],\n    \"photos\": [\n      {\n        \"value\": \"https://picture\",\n        \"type\": \"photo\"\n      }\n    ],\n    \"meta\": {\n      \"resourceType\": \"User\",\n      \"created\": \"2018-04-11T18:16:44.429Z\",\n      \"lastModified\": \"2018-06-01T18:18:11.977Z\"\n    },\n    \"urn:ietf:params:scim:schemas:extension:auth0:2.0:User\": {\n      \"emailVerified\": true,\n      \"appMetadata\": [\n        {\n          \"type\": \"role\",\n          \"value\": \"Developer\"\n        },\n        {\n          \"type\": \"level\",\n          \"value\": \"Level-2\"\n        }\n      ],\n      \"blocked\": false,\n      \"gender\": \"male\",\n      \"lastIp\": \"73.95.135.98\",\n      \"lastLogin\": \"2018-05-07T16:38:55.776Z\",\n      \"loginsCount\": 2,\n      \"multifactor\": [\"guardian\"],\n      \"userMetadata\": [\n        {\n          \"type\": \"question\",\n          \"value\": \"What is your Dog's name?\"\n        },\n        {\n          \"type\": \"answer\",\n          \"value\": \"Firulais\"\n        },\n        {\n          \"type\": \"children\",\n          \"value\": [\"Girl Name 1\", \"Boy Name 1\"]\n        }\n      ],\n      \"verifyEmail\": true\n    },\n    \"password\": \"my-passw$#fdsFK#@dsord\"\n  }"
 				},
 				"url": {
-					"raw": "http://localhost:8081/scim/schemas/urn:ietf:params:scim:schemas:core:2.0:User",
-					"protocol": "http",
+					"raw": "{{domain}}/schemas/urn:ietf:params:scim:schemas:core:2.0:User",
 					"host": [
-						"localhost"
+						"{{domain}}"
 					],
-					"port": "8081",
 					"path": [
-						"scim",
 						"schemas",
 						"urn:ietf:params:scim:schemas:core:2.0:User"
 					]
@@ -293,7 +269,7 @@
 					},
 					{
 						"key": "Authorization",
-						"value": "bearer <TOKEN>"
+						"value": "bearer {{token}}"
 					}
 				],
 				"body": {
@@ -301,14 +277,11 @@
 					"raw": "  {\n    \"schemas\": [\n      \"urn:ietf:params:scim:schemas:core:2.0:User\",\n      \"urn:ietf:params:scim:schemas:extension:auth0:2.0:User\"\n    ],\n    \"id\": \"auth0|id\",\n    \"externalId\": \"alanturing@turing.com\",\n    \"displayName\": \"Leandro Pelorosso\",\n    \"nickName\": \"leandro.pelorosso\",\n    \"locale\": \"en\",\n    \"name\": {\n          \"familyName\": \"Turing\",\n          \"formatted\": \"Alan Turing\",\n          \"givenName\": \"Anan\"\n    },\n    \"emails\": [\n      {\n        \"value\": \"alanturing@turing8.com\",\n        \"primary\": true\n      }\n    ],\n    \"photos\": [\n      {\n        \"value\": \"https://picture\",\n        \"type\": \"photo\"\n      }\n    ],\n    \"meta\": {\n      \"resourceType\": \"User\",\n      \"created\": \"2018-04-11T18:16:44.429Z\",\n      \"lastModified\": \"2018-06-01T18:18:11.977Z\"\n    },\n    \"urn:ietf:params:scim:schemas:extension:auth0:2.0:User\": {\n      \"emailVerified\": true,\n      \"appMetadata\": [\n        {\n          \"type\": \"role\",\n          \"value\": \"Developer\"\n        },\n        {\n          \"type\": \"level\",\n          \"value\": \"Level-2\"\n        }\n      ],\n      \"blocked\": false,\n      \"gender\": \"male\",\n      \"lastIp\": \"73.95.135.98\",\n      \"lastLogin\": \"2018-05-07T16:38:55.776Z\",\n      \"loginsCount\": 2,\n      \"multifactor\": [\"guardian\"],\n      \"userMetadata\": [\n        {\n          \"type\": \"question\",\n          \"value\": \"What is your Dog's name?\"\n        },\n        {\n          \"type\": \"answer\",\n          \"value\": \"Firulais\"\n        },\n        {\n          \"type\": \"children\",\n          \"value\": [\"Girl Name 1\", \"Boy Name 1\"]\n        }\n      ],\n      \"verifyEmail\": true\n    },\n    \"password\": \"my-passw$#fdsFK#@dsord\"\n  }"
 				},
 				"url": {
-					"raw": "http://localhost:8081/scim/users?startIndex=1&count=3",
-					"protocol": "http",
+					"raw": "{{domain}}/users?startIndex=1&count=3",
 					"host": [
-						"localhost"
+						"{{domain}}"
 					],
-					"port": "8081",
 					"path": [
-						"scim",
 						"users"
 					],
 					"query": [
@@ -336,7 +309,7 @@
 					},
 					{
 						"key": "Authorization",
-						"value": "bearer <TOKEN>"
+						"value": "bearer {{token}}"
 					}
 				],
 				"body": {
@@ -344,14 +317,11 @@
 					"raw": "  {\n    \"schemas\": [\n      \"urn:ietf:params:scim:schemas:core:2.0:User\",\n      \"urn:ietf:params:scim:schemas:extension:auth0:2.0:User\"\n    ],\n    \"id\": \"auth0|id\",\n    \"externalId\": \"alanturing@turing.com\",\n    \"displayName\": \"Leandro Pelorosso\",\n    \"nickName\": \"leandro.pelorosso\",\n    \"locale\": \"en\",\n    \"name\": {\n          \"familyName\": \"Turing\",\n          \"formatted\": \"Alan Turing\",\n          \"givenName\": \"Anan\"\n    },\n    \"emails\": [\n      {\n        \"value\": \"alanturing@turing8.com\",\n        \"primary\": true\n      }\n    ],\n    \"photos\": [\n      {\n        \"value\": \"https://picture\",\n        \"type\": \"photo\"\n      }\n    ],\n    \"meta\": {\n      \"resourceType\": \"User\",\n      \"created\": \"2018-04-11T18:16:44.429Z\",\n      \"lastModified\": \"2018-06-01T18:18:11.977Z\"\n    },\n    \"urn:ietf:params:scim:schemas:extension:auth0:2.0:User\": {\n      \"emailVerified\": true,\n      \"appMetadata\": [\n        {\n          \"type\": \"role\",\n          \"value\": \"Developer\"\n        },\n        {\n          \"type\": \"level\",\n          \"value\": \"Level-2\"\n        }\n      ],\n      \"blocked\": false,\n      \"gender\": \"male\",\n      \"lastIp\": \"73.95.135.98\",\n      \"lastLogin\": \"2018-05-07T16:38:55.776Z\",\n      \"loginsCount\": 2,\n      \"multifactor\": [\"guardian\"],\n      \"userMetadata\": [\n        {\n          \"type\": \"question\",\n          \"value\": \"What is your Dog's name?\"\n        },\n        {\n          \"type\": \"answer\",\n          \"value\": \"Firulais\"\n        },\n        {\n          \"type\": \"children\",\n          \"value\": [\"Girl Name 1\", \"Boy Name 1\"]\n        }\n      ],\n      \"verifyEmail\": true\n    },\n    \"password\": \"my-passw$#fdsFK#@dsord\"\n  }"
 				},
 				"url": {
-					"raw": "http://localhost:8081/scim/users?startIndex=1&count=3&attributes=emails,urn:auth0:2.0:User.identities.connection,urn:auth0:2.0:User.identities.provider",
-					"protocol": "http",
+					"raw": "{{domain}}/users?startIndex=1&count=3&attributes=emails,urn:auth0:2.0:User.identities.connection,urn:auth0:2.0:User.identities.provider",
 					"host": [
-						"localhost"
+						"{{domain}}"
 					],
-					"port": "8081",
 					"path": [
-						"scim",
 						"users"
 					],
 					"query": [
