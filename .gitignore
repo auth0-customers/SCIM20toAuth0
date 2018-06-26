@@ -39,3 +39,4 @@ jspm_packages
 dist
 config_*.js
 .idea
+*.env
